@@ -2,7 +2,8 @@ setlocal tabstop=2
 "查找编码的规则（vim7默认都用utf-8，打开包含gbk字符的文件会出现乱码）
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 "GUI界面里的字体，默认有抗锯齿
-set guifont=Monaco 
+"set guifont=Monaco 
+set guifont=Monaco:h9
 set linespace=4
 "用<>调整缩进时的长度
 set shiftwidth=4
@@ -32,8 +33,15 @@ map <F8> :NERDTreeClose<CR>
 map <F6> :%!ruby<CR>
 set autoindent
 set cindent
-set directory=/home/lxyluu/.tmp_vim
+set directory=/home/ll/.tmp_vim
 set nocp 
 set hlsearch
 map <c-h> ,c<space>
 map <c-p> "*p
+map <leader>h :set filetype=html<CR>
+map <leader>j :set filetype=js<CR>
+map <leader>b :set filetype=rb<CR>
+map <leader>e :set filetype=eruby-rails<CR>
+map <leader>c :set filetype=css<CR>
+set t_Co=256
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
